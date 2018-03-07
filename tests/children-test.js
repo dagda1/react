@@ -10,7 +10,7 @@ describe('children invocation', () => {
 
   let wrap = props => mount(<Microstates {...props} />);
 
-  describe('render without value', function() {
+  describe('render without value', () => {
     it('sends state and actions to children', () => {
       let state = wrap({ Type: Number, children })
         .find(Result)
@@ -23,7 +23,7 @@ describe('children invocation', () => {
     });
   });
 
-  describe('children invocation with value', function() {
+  describe('children invocation with value', () => {
     it('sends state and actions to children', () => {
       let state = wrap({ Type: Number, value: 42, children })
         .find(Result)
@@ -36,7 +36,7 @@ describe('children invocation', () => {
     });
   });
 
-  describe('state when children change', function() {
+  describe('state when children change', () => {
     let component = {};
     class Modal {
       isOpen = Boolean;

@@ -4,7 +4,7 @@ import Microstates from '../src';
 import { stubConsoleError } from '../setupTests';
 import { mount } from 'enzyme';
 
-it('exports Microstates', function() {
+it('exports Microstates', () => {
   expect(Microstates).toBeInstanceOf(Function);
 });
 

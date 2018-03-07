@@ -3,7 +3,7 @@ import React from 'react';
 import Microstates, { Consumer } from '../src';
 import { mount } from 'enzyme';
 
-it('it exports Consumer component', () => {
+it('exports Consumer component', () => {
   expect(Consumer).toBeInstanceOf(Function);
 });
 
