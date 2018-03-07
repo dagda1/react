@@ -58,20 +58,20 @@ describe('children invocation', () => {
 
     let wrapper = wrap();
 
-    it('has mounted', function() {
-      expect(wrapper.find(Container)).toHaveLength(1);
+    it('has mounted', () => {
+      expect(wrapper.find(Container).exists()).toBe(true);
     });
 
-    it('has modal', function() {
-      expect(wrapper.find('.modal')).toHaveLength(1);
+    it('has modal', () => {
+      expect(wrapper.find('.modal').exists()).toBe(true);
     });
 
-    it('has button with Close', function() {
+    it('has button with Close', () => {
       expect(wrapper.find('button').text()).toBe('Close');
     });
 
-    describe('hiding the modal', function() {
-      it('hides the modal and changes button text', function() {
+    describe('hiding the modal', () => {
+      it('hides the modal and changes button text', () => {
         expect(wrapper.find('button').text()).toBe('Close'); // precondition
 
         wrapper.find('button').simulate('click');

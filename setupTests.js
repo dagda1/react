@@ -17,21 +17,3 @@ export function stubConsoleError() {
     console.error = error;
   });
 }
-
-export function mount(element, component) {
-  let mounted;
-  beforeEach(() => {
-    mounted = mountComponent(element);
-    if (component) {
-      component.mounted = mounted;
-    }
-  });
-  afterEach(() => {
-    if (mounted) {
-      mounted.unmount();
-    }
-    if (component) {
-      mounted = null;
-    }
-  });
-}
